@@ -1,0 +1,59 @@
+services:
+  app:
+    build:
+      context: ./inicie-backend-exam
+      dockerfile: Dockerfile
+    container_name: laravel_app
+    ports:
+      - "8000:80"
+    environment:
+      - DB_HOST=db
+      - DB_DATABASE=app
+      - DB_USERNAME=app
+      - DB_PASSWORD=nacional1nn-@pp-4561327
+    depends_on:
+      - db
+    networks:
+      - backend-network
+
+  db:
+    image: mysql:8.0
+    container_name: mysql_db
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+      - MYSQL_DATABASE=app
+      - MYSQL_USER=app
+      - MYSQL_PASSWORD=nacional1nn-@pp-4561327
+    networks:
+      - backend-network
+
+  nginx:
+    image: nginx:latest
+    container_name: laravel_nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./inicie-backend-exam:/var/www/html
+      - ./inicie-backend-exam/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - app
+    networks:
+      - backend-network
+
+  frontend:
+    build:
+      context: ./inicie-frontend-exam
+      dockerfile: Dockerfile
+    container_name: angular_frontend
+    ports:
+      - "4200:4200"
+    depends_on:
+      - app
+    networks:
+      - backend-network
+
+networks:
+  backend-network:
+    driver: bridge

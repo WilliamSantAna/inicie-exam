@@ -1,0 +1,6 @@
+[submodule "inicie-backend-exam"]
+	path = inicie-backend-exam
+	url = git@github.com:WilliamSantAna/inicie-backend-exam.git
+[submodule "inicie-frontend-exam"]
+	path = inicie-frontend-exam
+	url = git@github.com:WilliamSantAna/inicie-frontend-exam.git
