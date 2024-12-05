@@ -5,12 +5,13 @@ services:
       dockerfile: Dockerfile
     container_name: inicie-backend
     working_dir: /var/www/html
+    user: "1000:1000"
     volumes:
       - ./inicie-backend-exam:/var/www/html
     ports:
       - "8080:80"
     depends_on:
-      - db
+      - inicie-db
     networks:
       - inicie-network
 
@@ -28,7 +29,7 @@ services:
     networks:
       - inicie-network
 
-  db:
+  inicie-db:
     image: mysql:8.0
     container_name: inicie-db
     ports:
