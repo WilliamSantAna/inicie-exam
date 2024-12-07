@@ -75,7 +75,11 @@ sudo docker compose up
 
 Entre no container back-end
 ```bash
-docker exec -it inicie-backend bash``` OU com sudo ```sudo docker exec -it inicie-backend bash
+docker exec -it inicie-backend bash
+``` 
+OU com sudo 
+```bash
+sudo docker exec -it inicie-backend bash
 ```
 
 Rode dentro do container:
