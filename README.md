@@ -29,7 +29,10 @@ Não vou dar explicações detalhadas sobre a instalação destes pre-requisitos
 Primeiro, clone o repositório  e seus submódulos na sua máquina local em algum local aque ache apropriado:
 
 ```bash
-git clone --recurse-submodules https://github.com/WilliamSantAna/inicie-exam.git .
+git clone https://github.com/WilliamSantAna/inicie-exam.git
+cd inicie-exam
+sudo git config submodule.inicie-frontend-exam.url https://github.com/WilliamSantAna/inicie-frontend-exam.git
+sudo git config submodule.inicie-backend-exam.url https://github.com/WilliamSantAna/inicie-backend-exam.git
 ```
 
 ### 2. Configuração do ambiente
