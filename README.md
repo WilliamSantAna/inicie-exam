@@ -85,7 +85,8 @@ sudo docker exec -it inicie-backend bash
 Rode dentro do container:
 
 ```bash
-php artisan migrate
+php artisan migrate:fresh
+php artisan db:seed
 php artisan config:cache
 ```
 
