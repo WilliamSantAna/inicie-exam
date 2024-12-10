@@ -1,6 +1,8 @@
 # inicie-app-laravel-exam
 Teste seletivo para Inicie
 
+URL de acesso ao teste: http://ec2-3-16-13-189.us-east-2.compute.amazonaws.com/app
+
 # Gerenciador de Tarefas
 
 Este é um projeto de gerenciamento de tarefas desenvolvido com Laravel (backend) e Angular (frontend). 
