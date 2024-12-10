@@ -10,7 +10,9 @@ Ele segue a arquitetura de API RESTful, usando o padrão de repositório (Reposi
 
 
 Os links da aplicação são:
+
 Back-end: http://localhost:8080/api/
+
 Front-end: http://localhost:4200/app/
 
 
@@ -20,7 +22,7 @@ Antes de começar, você precisará de alguns pré-requisitos:
 
 - [Docker](https://www.docker.com/products/docker-desktop) (para criação de containers)
 - [Docker Compose](https://docs.docker.com/compose/install/) (para orquestrar os containers)
-- [Git]
+- [Git](https://git-scm.com/downloads) (para trabalhar com o controle de versão)
 
 Não vou dar explicações detalhadas sobre a instalação destes pre-requisitos, porque cada SO tem suas particularidades.
 
